@@ -1,0 +1,22 @@
+<!doctype html>
+<title>Search Results List Page</title>
+
+<h1>Semantic Search</h1>
+<form action="/">
+    <input type="text" name="query" value="{{ query }}" size="80"> <input type="submit" value="Search">
+</form>
+
+<h3>Re-ranked Results (Embeddings)</h3>
+{% for dict_item in reranked_list %}
+    <a href="https://arxiv.org/abs/{{ dict_item['_id'] }}">{{ dict_item['title'] }}</a><br>
+    {{ dict_item['sentence'] }}
+    (_score: {{ dict_item['_score'] }}, cos: {{ dict_item['cos'] }} )</br>
+{% endfor %}
+
+
+<h3>Original Results (Elastic)</h3>
+{% for dict_item in original_list %}
+    <a href="https://arxiv.org/abs/{{ dict_item['_id'] }}">{{ dict_item['title'] }}</a><br>
+    {{ dict_item['sentence'] }}
+    (_score: {{ dict_item['_score'] }}, cos: {{ dict_item['cos'] }} )</br>
+{% endfor %}
