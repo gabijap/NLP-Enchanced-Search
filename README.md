@@ -3,6 +3,11 @@
 This is PyTorch implementation of the Quick Thought (QT) algorithm from the paper Lajanugen Logeswaran, Honglak Lee, An
 efficient framework for learning sentence representations, ICLR 2018.
 
+The paper allows to find the semantic similarities between the sentences and thus leverage it in the semantically improved search.
+
+![image](https://github.com/gabijap/NLP-Enchanced-Search/assets/32993945/2aa9bb00-edfa-43d2-8c6f-47db98ba24eb)
+
+
 ## Environment Setup
 
 This is a list of what needs to be installed:
